@@ -1,0 +1,13 @@
+event_id,run_id,fault_type,onset_idx,end_idx,onset_t_s,duration_s,details
+0,6,leak,66606,67206,1806,600,{'emitter_coef': 4.974078244835178e-06}
+1,6,partial_blockage,69726,70626,4926,900,{'filter_mult': 2.03}
+2,6,turbidity_spike,72944,74144,8144,1200,{'added_NTU': 16.0}
+3,7,low_do,77400,78300,1800,900,{}
+4,7,pump_slowdown,80736,81636,5136,900,{'speed_mult': 0.86}
+5,7,pump_slowdown,83431,84331,7831,900,{'speed_mult': 0.79}
+6,8,sensor_drift,87911,89111,1511,1200,"{'sensor': 'ph', 'total_drift': 0.35}"
+7,8,leak,91028,91628,4628,600,{'emitter_coef': 4.879835457984363e-06}
+8,8,sensor_drift,94678,95878,8278,1200,"{'sensor': 'do_mgL', 'total_drift': -1.2}"
+9,9,turbidity_spike,98709,99909,1509,1200,{'added_NTU': 36.6}
+10,9,low_do,102238,103138,5038,900,{}
+11,9,partial_blockage,105078,105978,7878,900,{'filter_mult': 2.72}

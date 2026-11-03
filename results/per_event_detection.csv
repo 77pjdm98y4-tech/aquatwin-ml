@@ -1,0 +1,13 @@
+event_id,fault_type,detected_if,delay_s_if,already_on_if,detected_lof,delay_s_lof,detected_z,delay_s_z
+0,leak,False,,False,True,38,True,93
+1,partial_blockage,True,112.0,False,True,50,True,71
+2,turbidity_spike,True,41.0,False,True,17,True,25
+3,low_do,False,,False,True,70,True,68
+4,pump_slowdown,True,139.0,False,True,11,True,26
+5,pump_slowdown,True,49.0,False,True,16,True,0
+6,sensor_drift,False,,False,True,78,True,78
+7,leak,True,119.0,False,True,95,True,105
+8,sensor_drift,False,,False,True,102,True,103
+9,turbidity_spike,True,656.0,False,True,20,True,23
+10,low_do,False,,False,True,70,True,77
+11,partial_blockage,True,39.0,False,True,0,True,0

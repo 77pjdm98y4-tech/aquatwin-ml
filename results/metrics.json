@@ -1,0 +1,192 @@
+{
+  "data": {
+    "rows": 108000,
+    "hours": 30.0,
+    "train_hours": 11.7,
+    "calibration_hours": 5.8,
+    "test_hours": 12.0,
+    "fault_events": 12,
+    "missing_readings_filled": 1098
+  },
+  "isolation_forest": {
+    "sample_level": {
+      "tp": 4070,
+      "fp": 619,
+      "tn": 19181,
+      "fn": 7330,
+      "sensitivity": 0.357,
+      "specificity": 0.969,
+      "precision": 0.868
+    },
+    "event_level": {
+      "detection_rate": 0.583,
+      "median_delay_s": 112.0,
+      "false_alarms_per_hour": 0.73
+    }
+  },
+  "lof": {
+    "sample_level": {
+      "tp": 10833,
+      "fp": 4327,
+      "tn": 15473,
+      "fn": 567,
+      "sensitivity": 0.95,
+      "specificity": 0.781,
+      "precision": 0.715
+    },
+    "event_level": {
+      "detection_rate": 1.0,
+      "median_delay_s": 44.0,
+      "false_alarms_per_hour": 2.0
+    }
+  },
+  "zscore": {
+    "sample_level": {
+      "tp": 10731,
+      "fp": 4462,
+      "tn": 15338,
+      "fn": 669,
+      "sensitivity": 0.941,
+      "specificity": 0.775,
+      "precision": 0.706
+    },
+    "event_level": {
+      "detection_rate": 1.0,
+      "median_delay_s": 69.5,
+      "false_alarms_per_hour": 0.36
+    }
+  },
+  "prediction": {
+    "turb_out_NTU": {
+      "normal operation": {
+        "physics twin only": {
+          "r2": 0.757,
+          "mape": 25.32,
+          "accuracy_pct": 74.7,
+          "mae": 0.26
+        },
+        "hybrid: physics + random_forest": {
+          "r2": 0.966,
+          "mape": 7.31,
+          "accuracy_pct": 92.7,
+          "mae": 0.073
+        },
+        "hybrid: physics + xgboost": {
+          "r2": 0.963,
+          "mape": 7.56,
+          "accuracy_pct": 92.4,
+          "mae": 0.076
+        }
+      },
+      "all test samples": {
+        "physics twin only": {
+          "r2": 0.648,
+          "mape": 28.5,
+          "accuracy_pct": 71.5,
+          "mae": 0.337
+        },
+        "hybrid: physics + random_forest": {
+          "r2": 0.709,
+          "mape": 11.8,
+          "accuracy_pct": 88.2,
+          "mae": 0.173
+        },
+        "hybrid: physics + xgboost": {
+          "r2": 0.711,
+          "mape": 11.97,
+          "accuracy_pct": 88.0,
+          "mae": 0.175
+        }
+      }
+    },
+    "press_kPa": {
+      "normal operation": {
+        "physics twin only": {
+          "r2": 0.96,
+          "mape": 2.87,
+          "accuracy_pct": 97.1,
+          "mae": 0.384
+        },
+        "hybrid: physics + random_forest": {
+          "r2": 0.99,
+          "mape": 1.42,
+          "accuracy_pct": 98.6,
+          "mae": 0.179
+        },
+        "hybrid: physics + xgboost": {
+          "r2": 0.99,
+          "mape": 1.43,
+          "accuracy_pct": 98.6,
+          "mae": 0.18
+        }
+      },
+      "all test samples": {
+        "physics twin only": {
+          "r2": 0.773,
+          "mape": 4.48,
+          "accuracy_pct": 95.5,
+          "mae": 0.637
+        },
+        "hybrid: physics + random_forest": {
+          "r2": 0.804,
+          "mape": 3.28,
+          "accuracy_pct": 96.7,
+          "mae": 0.462
+        },
+        "hybrid: physics + xgboost": {
+          "r2": 0.803,
+          "mape": 3.29,
+          "accuracy_pct": 96.7,
+          "mae": 0.462
+        }
+      }
+    },
+    "dp_filter_kPa": {
+      "normal operation": {
+        "physics twin only": {
+          "r2": 0.931,
+          "mape": 6.69,
+          "accuracy_pct": 93.3,
+          "mae": 0.507
+        },
+        "hybrid: physics + random_forest": {
+          "r2": 0.99,
+          "mape": 1.99,
+          "accuracy_pct": 98.0,
+          "mae": 0.15
+        },
+        "hybrid: physics + xgboost": {
+          "r2": 0.99,
+          "mape": 2.02,
+          "accuracy_pct": 98.0,
+          "mae": 0.153
+        }
+      },
+      "all test samples": {
+        "physics twin only": {
+          "r2": 0.729,
+          "mape": 8.87,
+          "accuracy_pct": 91.1,
+          "mae": 0.735
+        },
+        "hybrid: physics + random_forest": {
+          "r2": 0.785,
+          "mape": 4.81,
+          "accuracy_pct": 95.2,
+          "mae": 0.422
+        },
+        "hybrid: physics + xgboost": {
+          "r2": 0.784,
+          "mape": 4.84,
+          "accuracy_pct": 95.2,
+          "mae": 0.425
+        }
+      }
+    }
+  },
+  "latency": {
+    "features_plus_score_ms_median": 31.49,
+    "features_plus_score_ms_p95": 51.23,
+    "epanet_uncached_solve_ms": 14.9
+  }
+}
