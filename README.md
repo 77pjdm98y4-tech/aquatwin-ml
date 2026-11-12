@@ -9,6 +9,8 @@ Simulated bench-top data, a physics-based digital twin, anomaly detection and pr
 | `physics.py` | Testbed parameters, EPANET/WNTR hydraulic model, Carman–Kozeny filter, DO transfer model, 1 Hz time-stepping engine. Shared by the simulator and the twin. |
 | `simulate.py` | Generates labeled 1 Hz data with the six faults from Section 3.2. Writes `data/sensor_data.csv` and `data/events.csv`. |
 | `pipeline.py` | Data cleaning → digital twin → residual features → anomaly detectors → hybrid prediction models → metrics, figures, report. |
+| `export_dashboard_data.py` | Exports the simulated test runs (readings, twin values, anomaly scores, alarms) to `dashboard/aquatwin_dashboard_data.csv` for Grafana. |
+| `dashboard/` | Importable Grafana dashboard that reads that CSV from this repository. Setup steps in `dashboard/README.md`. |
 | `AquaTwin_ML_Colab.ipynb` | Runs everything in Google Colab. |
 | `results/` | `report.md`, `metrics.json`, per-event table, one figure per test run. |
 
