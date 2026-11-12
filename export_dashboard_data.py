@@ -93,7 +93,8 @@ def main():
                injected_fault=lambda s: next((v for v in s if v != "normal"), "normal"))
     g = out.groupby("bin").agg(agg)
     g.insert(0, "time", START_UTC + pd.to_timedelta(g.index * RESAMPLE_S, unit="s"))
-    g.insert(1, "time_epoch_ms", (g.time.astype("int64") // 10**6).astype("int64"))
+    epoch_ms = (g.time - pd.Timestamp("1970-01-01", tz="UTC")) // pd.Timedelta(milliseconds=1)
+    g.insert(1, "time_epoch_ms", epoch_ms.astype("int64"))
     g["time"] = g.time.dt.strftime("%Y-%m-%dT%H:%M:%SZ")
     g["alarm"] = g.alarm.astype(int)
     roundto = {c: 3 for c in num}
